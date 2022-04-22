@@ -11,4 +11,13 @@ describe("Test para User", () => {
         expect(user.dateCreated).not.toBeUndefined()
         expect(user.lastUpdated).not.toBeUndefined()
     })
+    test("Requerimiento 3: Agregando getters",() =>{
+        const user = new User(1,"AjelandroGon", "Ajelandro", "Bio")
+        expect(user.getUsername).toBe("AjelandroGon")
+    })
+    test("Requerimiento 4: Agregando setters",() =>{
+        const user = new User(1,"AjelandroGon", "Ajelandro", "Bio")
+        user.setUsername = "A.jelandro"
+        expect(user.username).toBe("A.jelandro")
+    })
 })

@@ -7,6 +7,14 @@ class User{
         this.bio=bio
         this.lastUpdated=new Date()
     }
+
+    get getUsername(){
+        return this.username
+    }
+
+    set setUsername(newUsername){
+        this.username = newUsername
+    }
 }
 
 module.exports = User
